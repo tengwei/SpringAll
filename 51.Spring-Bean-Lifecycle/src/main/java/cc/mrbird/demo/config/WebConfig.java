@@ -24,7 +24,12 @@ public class WebConfig {
     //     return new Bird();
     // }
 
-    @Bean
+//    @Bean
+//    public Fish fish(){
+//        return new Fish();
+//    }
+
+    @Bean(initMethod = "init2", destroyMethod = "destroy2")
     public Fish fish(){
         return new Fish();
     }
